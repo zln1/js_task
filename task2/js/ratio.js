@@ -3,6 +3,7 @@ function player() {
     var killer = document.getElementById('killer');
     var vulgar = document.getElementById('vulgar');
     var amount = document.getElementById('amount');
+    amount.value=amount.value.replace(/[^\d]/g,'');
     var amount_num = amount.value;
     if (amount_num >= 4 && amount_num <= 18) {
         var am_num = amount_num;
@@ -20,10 +21,5 @@ function btn() {
     var amount_num = amount.value;
     if (amount_num< 4 || amount_num > 18) {
         alert('请输入正确的玩家数量。');
-    }
-}
-function down() {
-    if (this.value.length===2){
-        return false;
     }
 }
