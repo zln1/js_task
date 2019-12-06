@@ -11,12 +11,12 @@ document.onkeydown=function player() {
         killer.innerHTML = killer_num;
         vulgar.innerHTML = am_num - killer_num;
     }
-}
+};
 
 function btn() {
     var killer = document.getElementById('killer');
 
-    if (killer.innerHTML == "") {
+    if (amount_num < 4 || amount_num > 18) {
         alert('请输入正确的玩家数量。');
     }
 }
