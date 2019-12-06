@@ -1,0 +1,134 @@
+@import "reset.css";
+/*  color   */
+/*  background-color */
+.X {
+  grid-area: c;
+  width: calc(2 * 2vh + 4px);
+  height: calc(2 * 2vh + 4px);
+  transform: rotate(45deg);
+}
+.X div {
+  width: 2vh;
+  height: 2vh;
+  float: left;
+  border: 1.5px solid #fff;
+}
+.X .x1 {
+  border-top: none;
+  border-left: none;
+}
+.X .x2 {
+  border-top: none;
+  border-right: none;
+}
+.X .x3 {
+  border-bottom: none;
+  border-left: none;
+}
+.X .x4 {
+  border-bottom: none;
+  border-right: none;
+}
+.icon-s-tri {
+  margin-left: 70px;
+  width: 0;
+  border-width: 13px 7px 0;
+  border-style: solid;
+  border-color: #b9e9f5 transparent transparent;
+}
+.icon-f-point :hover {
+  background-color: #69d1e9;
+}
+/* header */
+header {
+  display: grid;
+  grid-template-areas: "... ... ..." "a  b   c";
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 5fr 17fr;
+  justify-items: center;
+  align-items: center;
+  background-color: #29bde0;
+  height: 8vh;
+}
+.header-title {
+  grid-area: b;
+  font-size: 34px;
+  color: #fff;
+}
+html,
+body {
+  height: 100%;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+header {
+  grid-template-areas: "a b c" "a b c";
+}
+.custom-icon-arrow {
+  grid-area: a;
+  height: 20px;
+  width: 20px;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+main {
+  margin: 4px 8px 8px;
+}
+main .ratio-title {
+  padding: 4px 0;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 3px;
+  box-shadow: 1px 2px #ddd;
+  background-color: #fff;
+}
+main .ra-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content;
+  height: 40vh;
+  margin-top: 4px;
+  padding: 10px;
+  letter-spacing: 5px;
+  background-color: #fff;
+}
+main .ra-content div {
+  display: flex;
+  align-items: center;
+}
+main .ra-content div img {
+  width: 50px;
+  margin-right: 10px;
+}
+main .install {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  background-color: #fff;
+  margin: 10px 0 20px;
+}
+main .install .tip-left {
+  font-size: 15px;
+}
+main .install .tip-right {
+  font-size: 10px;
+  color: orange;
+}
+main .install input {
+  width: 30px;
+  height: 20px;
+  background-color: #ddd;
+  outline: none;
+  border: 0 none;
+  margin: 0 10px;
+}
+main .btn {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background-color: orange;
+}
+/*# sourceMappingURL=ratio.css.map */

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scale=1">
+    <title>玩家配比</title>
+    <link rel="stylesheet/less" type="text/css" href="../css/ratio.less">
+    <script src="../js/less.js"></script>
+    <script src="../js/ratio.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.10.0-beta/less.min.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="custom-icon-arrow"></div>
+</header>
+<main>
+    <div class="ratio-title">
+        玩家配比
+    </div>
+    <div class="ra-content">
+        <div class="job">
+            <img src="../img/kill.png" alt=".">
+            杀手<span id="killer"></span>人
+        </div>
+        <div class="job">
+            <img src="../img/kill.png" alt=".">
+            平民<span id="vulgar"></span>人
+        </div>
+    </div>
+    <div class="install">
+        <span class="tip-left">请输入玩家数量</span>
+        <label>
+            <input id="amount" type="text" onchange="player()">
+        </label>
+        <span class="tip-right">玩家数量为4-18</span>
+    </div>
+
+    <div class="btn" onclick="btn()">
+        <span>去发牌</span>
+    </div>
+
+
+</main>
+
+</body>
+
+</html>

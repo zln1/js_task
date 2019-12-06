@@ -1,0 +1,90 @@
+@import "base";
+
+html, body {
+  height: 100%;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+header {
+  grid-template-areas: "a b c" "a b c";
+}
+
+.custom-icon-arrow {
+  grid-area: a;
+  height: 20px;
+  width: 20px;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+
+main {
+  margin: 4px 8px 8px;
+
+  .ratio-title {
+    padding: 4px 0;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 3px;
+    box-shadow: 1px 2px #ddd;
+    background-color: #fff;
+  }
+  .ra-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+    height: 40vh;
+    margin-top: 4px;
+    padding: 10px;
+    letter-spacing: 5px;
+    background-color: #fff;
+    div {
+      display: flex;
+      align-items: center;
+      img {
+        width: 50px;
+        margin-right: 10px;
+      }
+    }
+
+  }
+
+  .install {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    background-color: #fff;
+    margin: 10px 0 20px;
+
+
+
+    .tip-left {
+      font-size: 15px;
+    }
+    .tip-right {
+      font-size: 10px;
+      color: orange;
+    }
+
+    input {
+      width: 30px;
+      height: 20px;
+      background-color: #ddd;
+      outline: none;
+      border: 0 none;
+      margin: 0 10px;
+    }
+  }
+
+  .btn {
+
+    padding: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background-color: orange;
+  }
+
+}

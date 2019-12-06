@@ -1,0 +1,303 @@
+@import "reset.css";
+
+/*  color   */
+
+
+/*  background-color */
+.bg29bde0() {
+  background-color: #29bde0;
+}
+
+.bg00() {
+  background-color: #000000;
+}
+
+.bgf0() {
+  background-color: #f0f0f0;
+}
+
+.bgfbb435() {
+  background-color: #fbb435;
+}
+
+.bgf5c97b() {
+  background-color: #f5c97b;
+}
+
+.bg83b09a() {
+  background-color: #83b09a;
+}
+
+.bgb9e9f5() {
+  background-color: #b9e9f5;
+}
+
+.bgf66f6f() {
+  background-color: #f66f6f;
+}
+
+
+//color
+.color-9a() {
+  color: #9a9a9a;
+}
+
+.color-ff() {
+  color: #ffffff;
+}
+
+.color-fbb435() {
+  color: #fbb435;
+}
+
+.color-78() {
+  color: #787878;
+}
+
+.color-515151() {
+  color: #515151;
+}
+
+.color-a6 () {
+  color: #a6a6a6;
+}
+
+.color-c7 () {
+  color: #c7c7c7;
+}
+
+
+//height-header
+@hh: 8vh;
+
+//border
+.b2sf() {
+  border: 2px solid #fff;
+}
+
+.bs(@size;@color) {
+  border: @size solid @color;
+}
+
+.bln() {
+  border-left: none;
+}
+
+.brn() {
+  border-right: none;
+}
+
+.bon() {
+  border-bottom: none;
+}
+
+.btn() {
+  border-top: none;
+}
+
+
+//layout
+.h-grid() {
+  display: grid;
+  grid-template-areas: "... ... ..." "a  b   c";
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 5fr 17fr;
+  justify-items: center;
+  align-items: center;
+}
+
+
+//icon
+//custom-icon
+//三条杠
+
+.thr-icon-outer(@out-h: 2vh,@color:#fff) {
+  @ph: e("calc(@{out-h}/2 - 3px)");
+  //@ph: (@out-h - 6px)/2;
+  height: @out-h;
+  width: e("calc(@{out-h} + 2*@{ph} - 1px)");
+  //@out-h + 2*@ph - 1px;
+  grid-area: a;
+  padding: calc(~"@{ph} + 1px") 3px;
+  border: 2px solid @color;
+
+  .thr-icon {
+    box-sizing: border-box;
+    height: 100%;
+    border: 2px solid #fff;
+    border-right: none;
+    border-left: none;
+    padding: @ph 0;
+    background-color: #fff;
+    background-clip: content-box;
+  }
+}
+
+
+// X
+@scale: 0.7;
+@div-size: 2vh;
+@x-size: calc(~"2 * @{div-size} + 4px");
+
+.X {
+  grid-area: c;
+  width: @x-size;
+  height: @x-size;
+  transform: rotate(45deg);
+
+}
+
+.X div {
+  width: @div-size;
+  height: @div-size;
+  float: left;
+
+  border: 1.5px solid #fff;
+}
+
+.X .x1 {
+  border-top: none;
+  border-left: none;
+}
+
+.X .x2 {
+  border-top: none;
+  border-right: none;
+}
+
+.X .x3 {
+  border-bottom: none;
+  border-left: none;
+}
+
+.X .x4 {
+  border-bottom: none;
+  border-right: none;
+}
+
+
+//  angle-one
+.icon-angle(@wh:10px,@rot:45deg,@bw:5px,@color:#e7e7e7) {
+  width: @wh;
+  height: @wh;
+  .bs(@bw, @color);
+  .btn;
+  .bln;
+  transform: rotate(@rot);
+}
+
+//triangle
+.icon-triangle(@size) {
+  width: 0;
+  box-sizing: border-box;
+  border: @size solid transparent;
+  border-left-color: #fbb435;
+}
+
+.icon-s-tri {
+
+  margin-left: 70px;
+  width: 0;
+  border-width: 13px 7px 0;
+  border-style: solid;
+  border-color: #b9e9f5 transparent transparent;
+}
+
+//four-point
+
+//<div class="icon-f-point-outer">
+//<div class="icon-f-point"></div>
+//<div class="icon-f-point"></div>
+//<div class="icon-f-point"></div>
+//<div class="icon-f-point"></div>
+//</div>
+
+
+.icon-f-point-outer (@size:10px){
+  @p:@size/2;
+  @out-size:@size * 4 + @p * 4;
+  //padding: 1px;
+  min-width: @out-size;
+  .icon-f-point {
+    display: inline-block;
+    margin-right: @p;
+    width: @size;
+    height: @size;
+    border-radius: 100%;
+    background-color: #f0f0f0;
+  }
+}
+
+
+
+.icon-f-point :hover {
+  background-color: #69d1e9;
+}
+
+
+/* header */
+header {
+  .h-grid;
+  .bg29bde0;
+  height: @hh;
+}
+
+.header-title {
+  grid-area: b;
+  font-size: 34px;
+  color: #fff;
+
+}
+
+//Sprite-icon
+.sprites(@bg-size: 193px 182px) {
+  display: inline-block;
+  background: url("../img/sprites.png") no-repeat;
+  background-size: @bg-size;
+}
+
+.icon-spr-11(@w:52px,@h:52px,@bp:-10px -10px) {
+  width: @w;
+  height: @h;
+  background-position: @bp;
+}
+
+.icon-spr-12(@w:51px,@h:42px,@bp:-82px -10px) {
+  width: @w;
+  height: @h;
+  background-position: @bp;
+}
+
+.icon-spr-21(@w:51px,@h:42px,@bp:-10px -82px) {
+  width: @w;
+  height: @h;
+  background-position: @bp;
+}
+
+//handle-icon
+
+.icon-spr-13 (@w-h:30px,@bp:-153px -10px) {
+  width: @w-h;
+  height: @w-h;
+  background-position: @bp;
+}
+
+.icon-spr-22(@w-h:30px,@bp:-70px -82px) {
+  width: @w-h;
+  height: @w-h;
+  background-position: @bp;
+}
+
+.icon-spr-23 (@w-h:30px,@bp:-153px -60px) {
+  width: @w-h;
+  height: @w-h;
+  background-position: @bp;
+}
+
+.icon-spr-31(@w-h:30px,@bp:-10px -142px) {
+  width: @w-h;
+  height: @w-h;
+  background-position: @bp;
+}
+
+//scale

@@ -1,0 +1,158 @@
+@import "base.less";
+
+html, body {
+  height: 100%;
+}
+
+header {
+  height: 8vh;
+}
+
+
+@scale:100vh/1095px;
+.sprites {
+  .sprites(@bg-size: 193px*@scale 182px*@scale);
+}
+.icon-spr-12 {
+  grid-area: a;
+  .icon-spr-12(@w:51px*@scale,@h:42px*@scale,@bp:-82px*@scale -10px*@scale);
+}
+.icon-spr-21 {
+  grid-area: c;
+  .icon-spr-21(@w:51px*@scale,@h:42px*@scale,@bp:-10px*@scale -82px*@scale);
+}
+.header-title {
+  font-size: 3.1vh;
+  grid-area: b;
+}
+
+
+
+.main-top {
+  height: 56.8%;
+  background-color: #29bde0;
+  border-top: 1px solid #74d4eb;
+  border-bottom: 1px solid #31a8c4;
+}
+
+.mt-outer {
+  display: grid;
+  grid-template-rows: 249fr 171fr 201fr;
+  align-items: center;
+  justify-items: center;
+  width: 76%;
+  height: 100%;
+  margin: 0 auto;
+
+
+  img {
+    max-width: 80%;
+  }
+
+  & > span {
+    font-size: 3vh;
+    width: 72.34vw;
+    color: #ffc865;
+  }
+
+  .mt-bot {
+    width: 72.34vw;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "time time time" "count1 count2 count3" "count4 count5 count6" "word1 word1 word1" "word2 word2 word2";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 2.37vh;
+    color: #fff;
+
+    span.over-time {
+      grid-area: time;
+    }
+
+    span.word1 {
+      grid-area: word1;
+    }
+
+    span.word2 {
+      grid-area: word2;
+    }
+
+  }
+}
+
+.main-bottom {
+
+  margin-bottom: 11.78vh;
+
+  .main-bot-content {
+    height: 15vh;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+
+    .mb-cont-outer {
+      display: grid;
+      grid-template-areas: "day-time" "record";
+      grid-template-rows: 17fr 32fr;
+      margin: 0 auto;
+      height: 100%;
+      width: 72.34vw;
+
+      .d-t {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .day {
+          font-size: 2.74vh;
+        }
+
+        .data {
+          color: #c7c7c7;
+          font-size: 1.83vh;
+        }
+      }
+
+      .rec {
+        font-size: 2.37vh;
+        color: #a6a6a6;
+      }
+
+    }
+  }
+
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 11.78vh;
+  background-color: #99dff0;
+  font-size: 3.65vh;
+
+  @height:7.85vh;
+  button {
+    height: @height;
+    width: @height * 3.15;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+  }
+  button :focus {
+    outline: 0;
+  }
+
+}
+
+
+
+
+.btn-left {
+  background-color: #f66f6f;
+}
+.btn-right {
+  background-color: #fbb435;
+}

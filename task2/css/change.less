@@ -1,0 +1,171 @@
+@import "base.less";
+
+html ,body {
+  height: 100%;
+  background-color: #f0f0f0;
+  overflow: hidden;
+
+}
+.change-menu {
+  //display: inline-block;
+  display: none;
+  width: 50%;
+  height: 100%;
+  border-right: 2px solid #29bde0;
+  font-size: 20px;
+  color: #29bde0;
+  .menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    border-bottom: 2px solid #dddddd;
+
+    .ic-out {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        margin-left: 4px;
+      }
+    }
+
+    .icon-ang {
+       .icon-angle(@rot: -45deg,@color: #29bde0);
+    }
+  }
+
+}
+.container {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  //transform: translate(50%,0);
+  transform: translate(0,0);
+}
+//头部自定义小图标
+header {
+  height: 8vh;
+}
+
+.thr-icon-outer {
+  .tran(){
+
+  }
+  .thr-icon-outer(@out-h: 3vh,@color: transparent);
+
+  .thr-icon {
+    .thr-icon;
+  }
+}
+
+
+.change-top {
+  display: grid;
+  grid-template-areas: "... a b";
+  grid-template-columns: 1fr 9fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin: 2.37vh auto;
+  width: 88.75%;
+  height: 10.6vh;
+  border: 1px solid #c9c9c9;
+  color: #9a9a9a;
+  background-color: #fff;
+  font-size: calc(~"10.6vh * 0.3");
+
+
+  & span {
+    grid-area: a;
+  }
+
+  a {
+    grid-area: b;
+    .icon-angle {
+      display: inline-block;
+      margin-right: 14px;
+      .icon-angle(@wh: 20px,@rot: -45deg,@bw: 5px);
+    }
+  }
+
+
+}
+
+.change-main {
+  position: relative;
+  margin: 0 auto;
+  height: 73vh;
+  width: 88.75%;
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+}
+
+
+.main-title {
+  height: 11.6%;
+  border-bottom: 2px solid #fdd793;
+  font-size: 3.45vh;
+  color: #fdd793;
+  text-align: center;
+  line-height: 8.2vh;
+}
+
+.main-content {
+  display: grid;
+  //grid-template-areas:
+  //  //        "top top top"
+  //  //        "l  ver1  r"
+  //  //        "l  num1  r"
+  //  //        "l  ver2  r"
+  //  //        "l  num2  r"
+  //  //        "l  ver3  r"
+  //  //        "l  num3  r"
+  //  //        "bot bot bot";
+
+  //grid-template-columns: 50fr 463fr 50fr;
+  grid-template-rows: repeat(3,134fr 82fr) ;
+  align-items: center;
+  justify-items: center;
+  margin: 2.74vh auto;
+  width: 72.34%;
+  height: 61.64vh;
+
+}
+
+.main-version {
+  height: 100%;
+  width: 100%;
+  background-color: #69d1e9;
+  font-size: 2.9vh;
+  color: #fff;
+  text-align: center;
+  line-height: 12.24vh;
+}
+
+.main-num {
+  font-size: 2.24vh;
+  color: #787878;
+
+}
+.icon-f-point-outer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+transform: translate(-50%, 0);
+  .icon-f-point-outer(@size: 1.64vh);
+  .icon-f-point{
+    .icon-f-point;
+  }
+  .icon-f-point:hover {
+    background-color: #69d1e9;
+  }
+}
+
+.icon-tri {
+  position: absolute;
+  right: -1vw;
+  top:36vh;
+  .icon-triangle(@size: 20px);
+}
