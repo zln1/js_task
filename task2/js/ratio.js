@@ -1,4 +1,4 @@
-function player() {
+document.onkeydown=function player() {
 
     var killer = document.getElementById('killer');
     var vulgar = document.getElementById('vulgar');
