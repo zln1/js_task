@@ -36,6 +36,14 @@
   border-style: solid;
   border-color: #b9e9f5 transparent transparent;
 }
+.custom-icon-arrow {
+  grid-area: a;
+  height: 20px;
+  width: 20px;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  transform: rotate(-45deg);
+}
 .icon-f-point :hover {
   background-color: #69d1e9;
 }

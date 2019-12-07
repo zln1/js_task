@@ -1,0 +1,114 @@
+@import "base";
+
+body, html {
+  height: 100%;
+  background-color: #29bde0;
+}
+
+header {
+  grid-template-areas: "a b c" "a b c";
+  border-bottom: 1px solid #74d4eb;
+}
+
+.h-title {
+  grid-area: b;
+  font-size: 30px;
+  color: #fff;
+}
+
+
+
+// X
+@scale: 1.5;
+@div-size: 2.5vh;
+@x-size: calc(~"2 * @{div-size} + 4px");
+
+.X {
+  grid-area: c;
+  width: @x-size;
+  height: @x-size;
+  transform: rotate(45deg);
+
+}
+
+.X div {
+  width: @div-size;
+  height: @div-size;
+  float: left;
+
+  border: 1.5px solid #fff;
+}
+
+.X .x1 {
+  border-top: none;
+  border-left: none;
+}
+
+.X .x2 {
+  border-top: none;
+  border-right: none;
+}
+
+.X .x3 {
+  border-bottom: none;
+  border-left: none;
+}
+
+.X .x4 {
+  border-bottom: none;
+  border-right: none;
+}
+
+
+.card-outer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 5vh auto;
+  width: 70vw;
+  max-width: 500px;
+  height: 58vh;
+  background-color: #ffedc5;
+  border: 6px solid #fff;
+
+  img {
+    height: 40%;
+  }
+}
+
+.card-btn {
+  display: block;
+  width: 70vw;
+  height: 60px;
+  max-width: 550px;
+  margin: 7vh auto;
+  font-size: 25px;
+  color: #fff;
+  background-color: #fbb435;
+  border: 0 none;
+}
+.card-btn:focus {
+  outline: none;
+}
+
+.card-numb {
+  position: absolute;
+  left: 50%;
+  top:0;
+  transform: translate(-50%,-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid #ffedc5;
+  background-color: #fff;
+  color: #f56b81;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+.role {
+  color: #29bde0;
+  font-size: 20px;
+}
