@@ -50,9 +50,8 @@
 /* header */
 header {
   display: grid;
-  grid-template-areas: "... ... ..." "a  b   c";
+  grid-template-areas: "a  b   c";
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 5fr 17fr;
   justify-items: center;
   align-items: center;
   background-color: #29bde0;
@@ -76,6 +75,7 @@ body {
 }
 .top-outer header {
   height: 37%;
+  border-bottom: 1px solid #74d4eb;
 }
 .top-outer header .thr-icon-outer {
   height: 2vh;
@@ -108,12 +108,18 @@ body {
   font-size: 3.1em;
 }
 .top-outer .voice {
-  display: flex;
+  display: grid;
+  grid-template-areas: "a b";
+  grid-template-columns: 7fr 1fr;
   align-items: center;
   justify-content: space-between;
   padding-left: 30px;
   height: 35%;
   background-color: #b9e9f5;
+}
+.top-outer .voice .controls {
+  display: flex;
+  justify-content: center;
 }
 .top-outer .voice .wd {
   grid-area: a;
@@ -182,9 +188,6 @@ main .user .user-outer .user-numb {
   text-align: center;
   line-height: 4.210985vmin;
 }
-main .user .user-outer:hover + .handle {
-  display: grid;
-}
 main .user .handle {
   display: none;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -229,7 +232,7 @@ footer .grap {
 footer .vote-btn {
   color: white;
   display: block;
-  margin: 0 auto  ;
+  margin: 0 auto;
   background-color: #fbb435;
   width: 76vmin;
   height: 45.8%;

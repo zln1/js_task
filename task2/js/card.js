@@ -14,20 +14,16 @@ function show() {
     var bot_num = card_btn.innerHTML.replace(/[^\d]/g, '');
     var pic = document.getElementById('pic');
     if (bot_num===''){
-        alert("法官查看");
+       window.open('vote.html');
     }else {
         if (top_num === bot_num) {
             pic.src = "../img/user.png";
             if (card[top_num-1] === 1) {
-                name.innerHTML = '狼人';
+                name.innerHTML = '杀手';
             } else {
                 console.log(card[top_num]+"card[x]");
                 name.innerHTML = '平民';
             }
-            console.log("id:"+top_num);
-            console.log(typeof parseInt(top_num));
-            console.log(card.length);
-
 
             if (parseInt(top_num)===card.length){
                 card_btn.innerHTML = "法官查看";
@@ -36,8 +32,6 @@ function show() {
                 console.log(top_num + "top_num");
                 card_btn.innerHTML = "隐藏并传递给" + top_num + "号";
             }
-
-
         } else {
             pic.src = "../img/card.png";
 
@@ -45,6 +39,5 @@ function show() {
             name.innerHTML = "";
             card_btn.innerHTML = "查看" + cid.innerHTML + "身份";
         }
-
     }
 }
