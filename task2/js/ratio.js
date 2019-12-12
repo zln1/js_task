@@ -69,7 +69,7 @@ function btn() {
     if (amount_num < 4 || amount_num > 18) {
         alert('请输入正确的玩家数量。');
     } else {
-        window.open('card.html')
+        window.location.href='card.html';
     }
 
 

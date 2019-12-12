@@ -24,89 +24,105 @@ $(function () {
     // }
 
 
-    function user() {
-
-    }
-
-    var day = {
-        did: 0,
-        killed: 0,
-        voted: 0
-    };
-    var u_list = [];
-    for (var i = 0; i < 7; i++) {
-        var a = new user();
-        a.uid = i + 1;
-        u_list.push(a);
-    }
-    console.log(u_list);
-
-    var box = $('div.one');
 
     // box.on('click',demo);
 
     // function demo() {
     //     box.css('background-color','#fff');
     // }
-    var menu = {
-        // 当前状态
-        currentState: 'hide',
 
-        // 绑定事件
-        initialize:  function() {
-            var box = $('div.one');
-            box.on("click", self.transition);
+
+
+
+    // var type = 0;
+    // $('#box').on('click',function () {
+    //     if (type===0){
+    //         type=1;
+    //     }else {
+    //         type=0;
+    //     }
+    //     m();
+    // });
+    //
+    // function m() {
+    //     if (type===1){
+    //         $('#box_son').css('display','block');
+    //     }else {
+    //         $('#box_son').css('display','none');
+    //     }
+    //     console.log(type);
+    // }
+    //
+
+
+
+
+var box_son = $('#box_son');
+    var menu = {
+        currentState: 'hide',
+        initialize:function () {
+            var self = $('#box');
+            // $('#box').on('click',self.transition);
+            self.on('hover',self.transition);
         },
 
-        // 状态转换
-        transition: function(event){
-            switch(this.currentState) {
+        transition:function () {
+            switch (this.currentState) {
                 case "hide":
-                    this.currentState = 'show';
-                    box.css('background-color','#fff');
+                    this.currentState='show';
+                    box_son.css('display','block');
                     break;
                 case "show":
-                    this.currentState = 'hide';
-                    box.css('background-color','red');
+                    this.currentState='hide';
+                    box_son.css('display','none');
                     break;
                 default:
                     console.log('Invalid State!');
                     break;
             }
         }
-
     };
 
-    var div ={
-      status:'one',
-    };
-
-
-    box.on('click',function () {
-
+    //
+    $('#box').on('click',function () {
+        menu.transition();
+        console.log(menu);
     });
-
-    var day = {
-        // when:null,
-        // killed: null,
-        // voted : null
-    };
-    day_list=[];
-    var day1 = Object.create(day);
-    day1.when=1;
-    // day1.killed=null;
-    day1.voted=15;
-    day_list.push(day1);
-    var day2 = Object.create(day);
-    day2.when=2;
-    day2.killed=14;
-    day2.voted=12;
-    day_list.push(day2);
-    console.log(day_list);
-   var a=day_list[1].killed;
-console.log(a);
+    //
+    //
 
 
+        /**
+         * @return {string}
+         */
+        function NumberToChinese(number) {
+            var chnNumChar = ['零','一','二','三','四','五','六','七','八','九'];
+            var chnUnitChar=['','十','百','千','万','十万','百万','千万','亿','万亿','亿亿'];
+            var strIns = '', chnStr= '';
+            var unitPos=0;
+            var zero = true;
+            while (number>0){
+                var v = number % 10;
+                if (v===0){
+                    if (!zero){
+                        zero=true;
+                        chnStr =chnNumChar[v]+chnStr;
+                    }
+                }else {
+                    zero=false;
+                    strIns=chnNumChar[v];
+                    strIns+=chnUnitChar[unitPos];
+                    chnStr=strIns+chnStr;
+                }
+                unitPos++;
+                number=Math.floor(number/10);
+            }
+            return chnStr;
+        }
 
+
+     var num=   NumberToChinese(100012);
+
+        console.log(num);
 });
 

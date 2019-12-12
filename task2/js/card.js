@@ -1,7 +1,7 @@
 $(function () {
     var icon1 = document.getElementsByClassName('custom-icon-arrow')[0];
     icon1.onclick = function () {
-        window.open('ratio.html');
+        window.location.href='ratio.html';
     };
 });
 var card = JSON.parse(localStorage.getItem('card'));
@@ -14,7 +14,7 @@ function show() {
     var bot_num = card_btn.innerHTML.replace(/[^\d]/g, '');
     var pic = document.getElementById('pic');
     if (bot_num===''){
-       window.open('vote.html');
+       window.location.href='vote.html';
     }else {
         if (top_num === bot_num) {
             pic.src = "../img/user.png";

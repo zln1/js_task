@@ -67,6 +67,10 @@ body {
   height: 100%;
 }
 header {
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #74d4eb;
+  width: 100%;
   height: 8vh;
 }
 .sprites {
@@ -91,14 +95,14 @@ header {
   grid-area: b;
 }
 .main-top {
-  height: 56.8%;
+  padding-top: 10vh;
   background-color: #29bde0;
   border-top: 1px solid #74d4eb;
   border-bottom: 1px solid #31a8c4;
 }
 .mt-outer {
   display: grid;
-  grid-template-rows: 249fr 171fr 201fr;
+  grid-template-rows: 249fr  201fr;
   align-items: center;
   justify-items: center;
   width: 76%;
@@ -118,22 +122,19 @@ header {
   height: 100%;
   display: grid;
   grid-template-areas: "time time time" "count1 count2 count3" "count4 count5 count6" "word1 word1 word1" "word2 word2 word2";
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr ;
   grid-template-columns: 1fr 1fr 1fr;
   font-size: 2.37vh;
   color: #fff;
 }
 .mt-outer .mt-bot span.over-time {
-  grid-area: time;
+  grid-area: count4;
 }
 .mt-outer .mt-bot span.word1 {
   grid-area: word1;
 }
 .mt-outer .mt-bot span.word2 {
   grid-area: word2;
-}
-.main-bottom {
-  margin-bottom: 11.78vh;
 }
 .main-bottom .main-bot-content {
   height: 15vh;
@@ -181,6 +182,7 @@ footer button {
   color: #fff;
   border: 0;
   border-radius: 5px;
+  font-size: 20px;
 }
 footer button :focus {
   outline: 0;

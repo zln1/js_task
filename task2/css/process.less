@@ -1,6 +1,9 @@
 @import "base";
 
 
+body {
+  background-color: #f0f0f0;
+}
 
 .h-title {
   grid-area: b;
@@ -8,10 +11,11 @@
   color: #fff;
 }
 
+
 .day {
 
   height: 50px;
-  margin: 20px;
+  margin: 5px;
   background-color: #fff;
   font-size: 20px;
   text-align: center;
@@ -21,11 +25,22 @@
 }
 
 .content {
+  display: none;
+  margin: 5px;
   border: 1px solid #c9c9c9;
+  background-color: #fff;
 
+  padding-bottom: 20px;
+  .k_message,.v_message{
+    margin: 0 auto;
+    width: 50vw;
+    font-size: 20px;
+
+  }
   span {
+    font-size: 20px;
     display: block;
-    width: 200px;
+    width: 50vw;
     background-color: #24a7c6;
     margin: 20px auto;
     color: #fff;
@@ -33,4 +48,25 @@
     padding: 10px 0;
   }
 
+}
+
+footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0;
+  height: 15vw;
+  width: 100%;
+  background-color: #99dff0;
+}
+
+button {
+  height: 60%;
+  width: 40%;
+  background-color: #fbb435;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
 }

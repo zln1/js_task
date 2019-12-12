@@ -153,7 +153,7 @@ body {
 }
 main {
   display: grid;
-  grid-template-rows: repeat(3, 28.9vmin);
+  grid-template-rows: repeat(2, 28.9vmin);
   grid-template-columns: repeat(3, 21.25vmin);
   grid-column-gap: 11vmin;
   grid-row-gap: 3.6vmin;
