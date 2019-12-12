@@ -141,24 +141,24 @@ $(function () {
 
     var step = $('span.step');
 
-    step.css('background-color', 'gray');
+    step.css('background-color', '#888');
     change_color();
 
     step.on('click', function () {
-        var color = $(this).css('background-color');
-
-        if (color === 'rgb(0, 0, 0)') {
-            (confirm("请进行游戏下一项活动"));
-            return;
-        }
-
-
         switch (this.textContent) {
             case "杀手杀人":
+                if (last_d.next_step!==1){
+                    (confirm("请进行游戏下一项活动"));
+                    return;
+                }
                 window.location.href = "vote.html?kill";
                 break;
             case "亡灵发表遗言":
-                if (last_d.next_step!==2){
+                if (last_d.next_step>2){
+                    (confirm("请进行游戏下一项活动"));
+                    return;
+                }
+                if (last_d.next_step<2){
                     firm3();
                     return;
                 }
@@ -166,7 +166,11 @@ $(function () {
                 location.reload();
                 break;
             case "玩家依次发言":
-                if (last_d.next_step!==3){
+                if (last_d.next_step>3){
+                    (confirm("请进行游戏下一项活动"));
+                    return;
+                }
+                if (last_d.next_step<3){
                     firm3();
                     return;
                 }

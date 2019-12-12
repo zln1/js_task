@@ -118,10 +118,10 @@ main .install {
   margin: 10px 0 20px;
 }
 main .install .tip-left {
-  font-size: 30px;
+  font-size: 20px;
 }
 main .install .tip-right {
-  font-size: 25px;
+  font-size: 20px;
   color: orange;
 }
 main .install input {

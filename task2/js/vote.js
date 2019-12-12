@@ -67,12 +67,11 @@ $(function () {
 
     var killed_id;
     $('div.user').on('click', function () {
-        console.log('点点点');
-        console.log(this.id);
         killed_id = this.id;
-        console.log($(this).children()[1]);
-        $('div.handle').css('display', 'none');
-        $($(this).children()[1]).css('display', 'grid');
+        if (type==='kill'||type==='vote'){
+            $('div.handle').css('display', 'none');
+            $($(this).children()[1]).css('display', 'grid');
+        }
     });
 
 
