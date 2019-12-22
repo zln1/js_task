@@ -24,14 +24,11 @@ $(function () {
     // }
 
 
-
     // box.on('click',demo);
 
     // function demo() {
     //     box.css('background-color','#fff');
     // }
-
-
 
 
     // var type = 0;
@@ -55,26 +52,24 @@ $(function () {
     //
 
 
-
-
-var box_son = $('#box_son');
+    var box_son = $('#box_son');
+    var box = $('#box');
     var menu = {
         currentState: 'hide',
-        initialize:function () {
-            var self = $('#box');
-            // $('#box').on('click',self.transition);
-            self.on('hover',self.transition);
+        initialize: function () {
+            var self = this;
+            this.on("hover", self.transition);
         },
 
-        transition:function () {
+        transition: function (event) {
             switch (this.currentState) {
                 case "hide":
-                    this.currentState='show';
-                    box_son.css('display','block');
+                    this.currentState = 'show';
+                    box_son.css('display', 'block');
                     break;
                 case "show":
-                    this.currentState='hide';
-                    box_son.css('display','none');
+                    this.currentState = 'hide';
+                    box_son.css('display', 'none');
                     break;
                 default:
                     console.log('Invalid State!');
@@ -83,46 +78,58 @@ var box_son = $('#box_son');
         }
     };
 
-    //
-    $('#box').on('click',function () {
+    box.on('hover',function () {
         menu.transition();
-        console.log(menu);
+
     });
     //
+
+    //
+    // box.on('hover', function () {
+    //     menu.transition();
+    // });
+
+    // menu=box;
+    // menu.initialize(12);
+    //
     //
 
 
-        /**
-         * @return {string}
-         */
-        function NumberToChinese(number) {
-            var chnNumChar = ['零','一','二','三','四','五','六','七','八','九'];
-            var chnUnitChar=['','十','百','千','万','十万','百万','千万','亿','万亿','亿亿'];
-            var strIns = '', chnStr= '';
-            var unitPos=0;
-            var zero = true;
-            while (number>0){
-                var v = number % 10;
-                if (v===0){
-                    if (!zero){
-                        zero=true;
-                        chnStr =chnNumChar[v]+chnStr;
-                    }
-                }else {
-                    zero=false;
-                    strIns=chnNumChar[v];
-                    strIns+=chnUnitChar[unitPos];
-                    chnStr=strIns+chnStr;
+    /**
+     * @return {string}
+     */
+    function NumberToChinese(number) {
+        var chnNumChar = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
+        var chnUnitChar = ['', '十', '百', '千', '万', '十万', '百万', '千万', '亿', '万亿', '亿亿'];
+        var strIns = '', chnStr = '';
+        var unitPos = 0;
+        var zero = true;
+        while (number > 0) {
+            var v = number % 10;
+            if (v === 0) {
+                if (!zero) {
+                    zero = true;
+                    chnStr = chnNumChar[v] + chnStr;
                 }
-                unitPos++;
-                number=Math.floor(number/10);
+            } else {
+                zero = false;
+                strIns = chnNumChar[v];
+                strIns += chnUnitChar[unitPos];
+                chnStr = strIns + chnStr;
             }
-            return chnStr;
+            unitPos++;
+            number = Math.floor(number / 10);
         }
+        return chnStr;
+    }
 
 
-     var num=   NumberToChinese(100012);
+    var num = NumberToChinese(100012);
 
-        console.log(num);
+    console.log(num);
+
+
+
+
 });
 
