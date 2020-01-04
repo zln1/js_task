@@ -1,0 +1,125 @@
+@import "reset.css";
+/*  color   */
+/*  background-color */
+.X {
+  grid-area: c;
+  width: calc(2 * 2vh + 4px);
+  height: calc(2 * 2vh + 4px);
+  transform: rotate(45deg);
+}
+.X div {
+  width: 2vh;
+  height: 2vh;
+  float: left;
+  border: 1.5px solid #fff;
+}
+.X .x1 {
+  border-top: none;
+  border-left: none;
+}
+.X .x2 {
+  border-top: none;
+  border-right: none;
+}
+.X .x3 {
+  border-bottom: none;
+  border-left: none;
+}
+.X .x4 {
+  border-bottom: none;
+  border-right: none;
+}
+.icon-s-tri {
+  margin-left: 70px;
+  width: 0;
+  border-width: 13px 7px 0;
+  border-style: solid;
+  border-color: #b9e9f5 transparent transparent;
+}
+.custom-icon-arrow {
+  grid-area: a;
+  height: 20px;
+  width: 20px;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+.icon-f-point :hover {
+  background-color: #69d1e9;
+}
+/* header */
+header {
+  display: grid;
+  grid-template-areas: "a  b   c";
+  grid-template-columns: 1fr 6fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background-color: #29bde0;
+  height: 8vh;
+}
+.header-title {
+  grid-area: b;
+  font-size: 34px;
+  color: #fff;
+}
+body {
+  background-color: #f0f0f0;
+}
+.h-title {
+  grid-area: b;
+  font-size: 30px;
+  color: #fff;
+}
+.day {
+  height: 50px;
+  margin: 5px;
+  background-color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  color: #29bde0;
+  border: 1px solid #c9c9c9;
+}
+.content {
+  display: none;
+  margin: 5px;
+  border: 1px solid #c9c9c9;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+.content .k_message,
+.content .v_message {
+  margin: 0 auto;
+  width: 70vw;
+  font-size: 20px;
+}
+.content span {
+  font-size: 20px;
+  display: block;
+  width: 70vw;
+  background-color: #24a7c6;
+  margin: 20px auto;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0;
+  height: 15vw;
+  width: 100%;
+  background-color: #99dff0;
+}
+button {
+  height: 60%;
+  width: 40%;
+  background-color: #fbb435;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+/*# sourceMappingURL=process.css.map */

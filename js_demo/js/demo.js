@@ -130,6 +130,23 @@ $(function () {
 
 
 
+    var md = $('.menu-dropdown');
+
+
+    md.on('click',function () {
+     var th=   $('#'+this.id).children();
+
+     console.log(th);
+     if (th.css('display')==='none'){
+         th.css('display','unset');
+     }else {
+         th.css('display','none');
+     }
+
+    })
+
+
+
 
 });
 

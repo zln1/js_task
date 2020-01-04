@@ -6,3 +6,37 @@
 .son{
     display: none;
 }
+
+.menu  {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-dropdown {
+
+
+}
+
+.menu-dropdown > ul {
+    display: none;
+}
+
+.house {
+    position: relative;
+}
+
+.trangle {
+    width: 0;
+    height: 0;
+    border: 250px solid rgba(255,255,255,0);
+    border-bottom-color: #000;
+}
+
+.square {
+    width: 150px;
+    height: 130px;
+    border: 100px solid #000;
+    border-bottom: none;
+    position: absolute;
+    left: 76px;
+}
